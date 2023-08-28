@@ -11,17 +11,17 @@
 ## Шаг 2 - Обновление
 
 ```bash
-    sudo apt update
+sudo apt update
 ```
 
 ```bash
-    sudo apt upgrade
+sudo apt upgrade
 ```
 
 или
 
 ```bash
-    sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade
 ```
 
 ## Шаг 3 - Установа [Outline Manager](https://getoutline.org/ru/get-started/#step-1)
@@ -35,37 +35,37 @@
 Первым делом обновите существующий список пакетов:
 
 ```bash
-    sudo apt update
+sudo apt update
 ```
 
 Затем установите несколько необходимых пакетов, которые позволяют apt использовать пакеты через HTTPS:
 
 ```bash
-    sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
 ```
 
 Добавьте ключ GPG для официального репозитория Docker в вашу систему:
 
 ```bash
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
 Добавьте репозиторий Docker в источники APT:
 
 ```bash
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 ```
 
 Потом обновите базу данных пакетов и добавьте в нее пакеты Docker из недавно добавленного репозитория:
 
 ```bash
-    sudo apt update
+sudo apt update
 ```
 
 Убедитесь, что установка будет выполняться из репозитория Docker, а не из репозитория Ubuntu по умолчанию:
 
 ```bash
-    apt-cache policy docker-ce
+apt-cache policy docker-ce
 ```
 
 Вы должны получить следующий вывод, хотя номер версии Docker может отличаться:
@@ -84,7 +84,7 @@ docker-ce:
 Установите Docker:
 
 ```bash
-    sudo apt install docker-ce
+sudo apt install docker-ce
 ```
 
 ### Дополнительно
@@ -92,7 +92,7 @@ docker-ce:
 Проверьте, что он запущен:
 
 ```bash
-    sudo systemctl status docker
+sudo systemctl status docker
 ```
 
 Вывод должен выглядеть примерно следующим образом, указывая, что служба активна и запущена:
@@ -120,11 +120,11 @@ TriggeredBy: ● docker.socket
 Для завершения сессии используйте:Выход
 
 ```bash
-    logout
+logout
 ```
 
 или
 
 ```bash
-    exit
+exit
 ```
